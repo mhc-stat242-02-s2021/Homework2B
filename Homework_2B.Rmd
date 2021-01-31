@@ -1,0 +1,44 @@
+---
+title: "Homework 2B"
+subtitle: "STAT 242: Intermediate Statistics"
+output: pdf_document
+---
+
+Don’t forget to load any packages using `library()` that you may need for this homework!!
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Problem 1 (10 pts)
+
+Researchers collected data from 20 participants to compare four different varietals of apple (described using
+numbers 298, 493, 649, and 937). The participants tasted the apples and rated the aftertaste on a scale from
+“0 (extreme dislike) to 150 (like very much)”^[https://vincentarelbundock.github.io/Rdatasets/doc/DAAG/appletaste.html].
+
+Conduct a full analysis to see if any of the mean aftertaste ratings are different among the four different
+varietals. The full analysis should include exploratory plots to check assumptions and all relevant parts of the hypothesis tests.
+
+Interpret all of your results in context. Explain how to interpret the p-value for the test and the conclusions
+that can be drawn from it as though to someone who had not taken a statistics class. What conclusions can
+be drawn about the apple varietals?
+
+```{r}
+apples <- read.csv("https://vincentarelbundock.github.io/Rdatasets/csv/DAAG/appletaste.csv")
+apples$product <- as.factor(apples$product)
+```
+
+## Problem 2 (15 pts)
+
+Use the following dataset, describing mortality outcomes for females suffering myocardial infarction (heart
+attacks), to see whether the mean age at onset (`age`) is different for three groups: current smokers,
+ex-smokers, and non-smokers (`smstat`)^[https://vincentarelbundock.github.io/Rdatasets/doc/DAAG/mifem.html
+].
+
+Conduct a full analysis to see if the mean onset for all three groups is different, or whether it is sufficient to consider only whether an individual has ever smoked or not.
+
+Interpret all of your results in context. Explain how to interpret the p-value for the test and the conclusions
+that can be drawn from it as though to someone who had not taken a statistics class. What conclusions can
+be drawn about the three groups?
+
+
